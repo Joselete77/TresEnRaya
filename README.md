@@ -1,4 +1,5 @@
 # Tic-Tac-Toe
+![Captura desde 2024-01-30 11-30-20](https://github.com/Joselete77/TresEnRaya/assets/71654543/72f1ee8c-e718-4138-a1a3-f36038a5067f)
 
 Welcome to Tic-Tac-Toe, the classic game available to play against the machine!
 
@@ -13,11 +14,13 @@ This project implements the game of Tic-Tac-Toe with the ability to challenge th
 - **Simple Interface:** Easy-to-use design for a comfortable gaming experience.
 
 ## Screenshots
+![Captura desde 2024-01-30 11-30-32](https://github.com/Joselete77/TresEnRaya/assets/71654543/ef82dfc7-8ccc-4afe-a808-112d3b282ea8)
 
+![Captura desde 2024-01-30 11-30-40](https://github.com/Joselete77/TresEnRaya/assets/71654543/3e02dda4-b69c-4d4c-aa36-8a041539e5bc)
 
 ## Website
 
-Access the [portfolio website](https://portafoliojoseangel.netlify.app/) to start playing.
+Access the [portfolio website](https://joselete77.github.io/TresEnRaya/) to start playing.
 
 ## License
 
