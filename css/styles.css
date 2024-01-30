@@ -45,6 +45,11 @@
 
 .header {
     color: white;
-    padding-bottom: 7%;
+    padding-bottom: 5%;
     width: 100%;
+}
+
+.selectGame {
+    display: flex !important;
+    justify-content: center !important;
 }

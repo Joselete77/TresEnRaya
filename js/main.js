@@ -1,3 +1,18 @@
+let vsMachine = true;
+const gameModeSwitch = document.getElementById('gameModeSwitch');
+
+function handleGameModeChange(checkbox) {
+    if (checkbox.checked) {
+      // Modo de juego contra la máquina
+      alert('Cambiaste a jugar contra la máquina');
+      vsMachine = true;
+    } else {
+      // Modo de juego contra un amigo
+      alert('Cambiaste a jugar contra un amigo');
+      vsMachine = false;
+    }
+}
+
 document.getElementById('toggleBtn').addEventListener('click', function () {
 
     const bgDarkElements = document.querySelectorAll('.bg-dark');
@@ -60,6 +75,7 @@ document.getElementById('toggleBtn').addEventListener('click', function () {
 
 });
 
+
 let board = [
     [0, 0, 0],
     [0, 0, 0],
@@ -70,13 +86,21 @@ let currentPlayer = 1;
 
 function makeMove(row, col) {
     if (board[row][col] === 0) {
+        gameModeSwitch.disabled = true;
         board[row][col] = currentPlayer;
 
         document.querySelector(`[onclick="makeMove(${row}, ${col})"]`).innerText = currentPlayer === 1 ? 'X' : 'O';
         currentPlayer = currentPlayer === 1 ? 2 : 1;
+        console.log(vsMachine)
 
-        if (!checkGameStatus() && currentPlayer === 2) {
-            makeComputerMove();
+        if (vsMachine === true) {
+            if (!checkGameStatus() && currentPlayer === 2) {
+                makeComputerMove();
+            }
+        } else {
+            if (checkGameStatus()) {
+                return;
+            }
         }
     }
 }
@@ -163,6 +187,7 @@ function announceDraw() {
 }
 
 function resetGame() {
+    gameModeSwitch.disabled = false;
     board = [
         [0, 0, 0],
         [0, 0, 0],
