@@ -1,0 +1,50 @@
+.row {
+    height: 20vh;
+}
+
+.div-title {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 25px;
+    max-height: 700px;
+}
+
+.title {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    text-shadow: 0 0 20px rgba(193, 145, 248, 0.8), 0 0 20px rgba(193, 145, 248, 0.8), 0 0 30px rgba(193, 145, 248, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 40px rgba(193, 145, 248, 0.8), 0 0 30px rgba(193, 145, 248, 0.8), 0 0 40px rgba(193, 145, 248, 0.8);
+    }
+}
+
+.btn-table {
+    font-size: 54px;
+}
+
+.footer {
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.header {
+    color: white;
+    padding-bottom: 7%;
+    width: 100%;
+}
