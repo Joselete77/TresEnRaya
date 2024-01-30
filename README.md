@@ -9,7 +9,7 @@ This project implements the game of Tic-Tac-Toe with the ability to challenge th
 
 ## Features
 
-- **Tic-Tac-Toe Game:** Play against the machine and challenge your strategic skills.
+- **Tic-Tac-Toe Game:** Play against the machine or your friend and challenge your strategic skills.
 - **Environment Customization:** Switch between a dark or light background to tailor the game to your liking.
 - **Simple Interface:** Easy-to-use design for a comfortable gaming experience.
 
