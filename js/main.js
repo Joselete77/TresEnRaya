@@ -1,5 +1,8 @@
 let vsMachine = true;
 const gameModeSwitch = document.getElementById('gameModeSwitch');
+const audio = document.getElementById('click-sound');
+const audioCelebration = document.getElementById('celebration-sound');
+var confettiDiv = document.getElementById('confetti');
 
 function handleGameModeChange(checkbox) {
     if (checkbox.checked) {
@@ -86,16 +89,19 @@ let currentPlayer = 1;
 
 function makeMove(row, col) {
     if (board[row][col] === 0) {
+        canMakeMove = false;
         gameModeSwitch.disabled = true;
+        audio.play();
         board[row][col] = currentPlayer;
 
         document.querySelector(`[onclick="makeMove(${row}, ${col})"]`).innerText = currentPlayer === 1 ? 'X' : 'O';
         currentPlayer = currentPlayer === 1 ? 2 : 1;
-        console.log(vsMachine)
 
         if (vsMachine === true) {
             if (!checkGameStatus() && currentPlayer === 2) {
-                makeComputerMove();
+                setTimeout(function() {
+                    makeComputerMove();
+                }, 1750);
             }
         } else {
             if (checkGameStatus()) {
@@ -177,7 +183,17 @@ function isBoardFull() {
 }
 
 function announceWinner(player) {
-    alert(`¡Jugador ${player} ha ganado!`);
+    audioCelebration.play();
+    var confettiElement = createCanvas(confettiDiv);
+    var confettiSettings = { target: confettiElement };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    setTimeout(function() {
+        confetti.clear();
+        confettiDiv.removeChild(confettiElement);
+        alert(`¡Jugador ${player} ha ganado!`);
+    }, 1250);
+    audio.pause();
     resetGame();
 }
 
@@ -200,3 +216,27 @@ function resetGame() {
     });
 
 }
+
+function createCanvas(parentElement) {
+    var canvas = document.createElement("canvas");
+  
+    var windowWidth = window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+  
+    var windowHeight = window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
+  
+    canvas.width = windowWidth;
+    canvas.height = windowHeight;
+  
+    canvas.style.position = 'absolute';
+    canvas.style.left = '0';
+    canvas.style.top = '0';
+  
+    parentElement.appendChild(canvas);
+  
+    return canvas;
+  }
+  

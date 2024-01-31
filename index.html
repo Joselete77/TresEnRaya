@@ -21,10 +21,17 @@
         <button id="toggleBtn" class="btn btn-outline-light my-2 my-sm-0" style="margin-right: 10%;"><i class="fas fa-sun"></i><span> Light</span></button>
     </nav>
 
-    <div class="container">
+    <div class="demo container">
         <div class="selectGame mb-4">
             <input id="gameModeSwitch" type="checkbox" data-toggle="switchbutton" checked data-onlabel="Contra la máquina" data-offlabel="Contra un amigo" checked data-width="200" data-height="50" data-onstyle="success" data-offstyle="danger" onchange="handleGameModeChange(this)">
         </div>
+        <audio id="click-sound" controls>
+            <source type="audio/mp3" src="sounds/ping-82822.mp3">
+        </audio>
+        <audio id="celebration-sound" controls>
+            <source type="audio/mp3" src="sounds/goodresult-82807.mp3">
+        </audio>
+        <div id="confetti"></div>
         <div class="row">
             <button class="col-4 btn btn-outline-light btn-table" onclick="makeMove(0, 0)"></button>
             <button class="col-4 btn btn-outline-light btn-table" onclick="makeMove(0, 1)"></button>
@@ -48,10 +55,11 @@
           <a href="https://portafoliojoseangel.netlify.app/">José Ángel Dorado González</a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
-
+        
 </body>
 </html>
