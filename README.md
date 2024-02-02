@@ -5,12 +5,14 @@ Welcome to Tic-Tac-Toe, the classic game available to play against the machine!
 
 ## Description
 
-This project implements the game of Tic-Tac-Toe with the ability to challenge the machine in exciting matches. Additionally, you can customize the look of the game by choosing between a dark or light background according to your preferences.
+This project implements the game of Tic-Tac-Toe with the ability to challenge the machine in exciting matches. Additionally, you can customize the look of the game by choosing between a dark or light background according to your preferences. Enjoy an enhanced gaming experience with the addition of sound effects while typing in the Tic-Tac-Toe game. Moreover, celebrate your victories with triumphant music and confetti when you emerge as the winner.
 
 ## Features
 
 - **Tic-Tac-Toe Game:** Play against the machine or your friend and challenge your strategic skills.
 - **Environment Customization:** Switch between a dark or light background to tailor the game to your liking.
+- **Simple Interface:** Easy-to-use design for a comfortable gaming experience.
+- **Victory Celebration:** Celebrate your wins with uplifting music and a confetti display for a delightful experience.
 - **Simple Interface:** Easy-to-use design for a comfortable gaming experience.
 
 ## Screenshots
